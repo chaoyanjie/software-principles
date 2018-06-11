@@ -7,7 +7,7 @@
 
 - SOLID (object-oriented programming)
   - [Single Responsibility Principle](#single-responsibility-principle)
-  - [Open–closed Principle](#open–closed principle)
+  - [Open–closed Principle](#open–closed-principle)
 
 
 ## Single Responsibility Principle
