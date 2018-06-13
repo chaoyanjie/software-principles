@@ -9,6 +9,8 @@
   - [Single Responsibility Principle](#single-responsibility-principle)
   - [Open–closed Principle](#open–closed-principle)
   - [Liskov substitution principle](#liskov-substitution-principle)
+  - [Interface segregation principle](#interface-segregation-principle)
+  - [Dependency inversion principle](#dependency-inversion-principle)
 
 
 ## Single Responsibility Principle
@@ -43,3 +45,28 @@ Barbara Liskov in a 1987 conference keynote address titled Data abstraction
 and hierarchy. It is a semantic rather than merely syntactic relation, because
 it intends to guarantee semantic interoperability of types in a hierarchy,
 object types in particular.
+
+
+## Interface segregation principle
+
+The interface-segregation principle (ISP) states that no client should be forced
+to depend on methods it does not use.
+ISP splits interfaces that are very large into smaller and more specific ones
+so that clients will only have to know about the methods that are of interest
+to them. Such shrunken interfaces are also called role interfaces.
+ISP is intended to keep a system decoupled and thus easier to refactor, change,
+and redeploy. ISP is one of the five SOLID principles of object-oriented design,
+similar to the High Cohesion Principle of GRASP.
+
+
+## Dependency inversion principle
+
+In object-oriented design, the dependency inversion principle refers to a
+specific form of decoupling software modules.
+When following this principle, the conventional dependency relationships
+established from high-level, policy-setting modules to low-level, dependency
+modules are reversed, thus rendering high-level modules independent of the
+low-level module implementation details. The principle states:
+
+1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
+2. Abstractions should not depend on details. Details should depend on abstractions.
