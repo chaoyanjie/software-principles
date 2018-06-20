@@ -1,72 +1,63 @@
-# Software Principles
+# 软件设计原则
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
-## Table of Contents
+## 目录
 
-- SOLID (object-oriented programming)
-  - [Single Responsibility Principle](#single-responsibility-principle)
-  - [Open–closed Principle](#open–closed-principle)
-  - [Liskov substitution principle](#liskov-substitution-principle)
-  - [Interface segregation principle](#interface-segregation-principle)
-  - [Dependency inversion principle](#dependency-inversion-principle)
-
-
-## Single Responsibility Principle
-
-The [single responsibility principle](//en.wikipedia.org/wiki/Single_responsibility_principle)
-is a computer programming principle that states that every module or class
-should have responsibility over a single part of the functionality provided by
-the software, and that responsibility should be entirely encapsulated by the
-class. All its services should be narrowly aligned with that responsibility.
-Robert C. Martin expresses the principle as,"A class should have only one reason
-to change."
+- SOLID（面向对象程序设计）
+  - [单一职责原则](#单一职责原则)
+  - [开闭原则](#开闭原则)
+  - [里氏替换原则](#里氏替换原则)
+  - [接口隔离原则](#接口隔离原则)
+  - [依赖反转原则](#依赖反转原则)
 
 
-## Open–closed Principle
+## 单一职责原则
 
-In object-oriented programming, the [open/closed principle](//en.wikipedia.org/wiki/Open–closed_principle)
-states "software entities (classes, modules, functions, etc.) should be open
-for extension, but closed for modification"; that is, such an entity can
-allow its behaviour to be extended without modifying its source code.
-
-
-## Liskov substitution principle
-
-Substitutability is a principle in object-oriented programming stating that,
-in a computer program, if S is a subtype of T, then objects of type T may be
-replaced with objects of type S (i.e. an object of type T may be substituted
-with any object of a subtype S) without altering any of the desirable properties
-of the program (correctness, task performed, etc.). More formally, the Liskov
-substitution principle (LSP) is a particular definition of a subtyping relation,
-called (strong) behavioral subtyping, that was initially introduced by
-Barbara Liskov in a 1987 conference keynote address titled Data abstraction
-and hierarchy. It is a semantic rather than merely syntactic relation, because
-it intends to guarantee semantic interoperability of types in a hierarchy,
-object types in particular.
+[单一职责原则](//en.wikipedia.org/wiki/Single_responsibility_principle)是一项计算机
+程序设计原则，它指出每个模块或类应该只负责软件提供的功能中的一项，并且这个职责应该被完全地
+封装在这个类中。它提供的所有服务都应该被细化，与职责保持一致。Robert C. Martin指出“一个类
+应该有且仅有一个原因能够使它改变”。
 
 
-## Interface segregation principle
+## 开闭原则
 
-The interface-segregation principle (ISP) states that no client should be forced
-to depend on methods it does not use.
-ISP splits interfaces that are very large into smaller and more specific ones
-so that clients will only have to know about the methods that are of interest
-to them. Such shrunken interfaces are also called role interfaces.
-ISP is intended to keep a system decoupled and thus easier to refactor, change,
-and redeploy. ISP is one of the five SOLID principles of object-oriented design,
-similar to the High Cohesion Principle of GRASP.
+在面向对象编程里，[开闭原则](//en.wikipedia.org/wiki/Open–closed_principle)指的是
+“软件实体（类，模块，函数等）对扩展开放，但对修改关闭；也就是说，一个实体允许在不修改它源码
+的情况下扩展它的行为。
 
 
-## Dependency inversion principle
+## 里氏替换原则
 
-In object-oriented design, the dependency inversion principle refers to a
-specific form of decoupling software modules.
-When following this principle, the conventional dependency relationships
-established from high-level, policy-setting modules to low-level, dependency
-modules are reversed, thus rendering high-level modules independent of the
-low-level module implementation details. The principle states:
+*可置换性*是面向对象程序设计中的一项原则，它指的是在计算机程序中，如果`S`是`T`的子类型，
+那么`T`类型的对象可以用`S`类型的对象**替换**，而不需要修改原有程序（例如，一个`T`类型
+的对象可以被任何子类型`S`的对象所替换）。
 
-1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
-2. Abstractions should not depend on details. Details should depend on abstractions.
+*里氏替换原则*是面向对象设计的基本原则之一。
+里氏替换原则中说，任何基类可以出现的地方，子类一定可以出现。
+LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，
+基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。
+
+*里氏替换原则*是对子类型关系的详细定义，叫做（强）行为型子类型。
+
+
+## 接口隔离原则
+
+接口隔离原则（ISP）指出客户对象不应该被强制地要求依赖于它不使用的方法。
+接口隔离原则强调将庞大的接口拆分成小的更具体的接口，这样客户只需要了解它感兴趣的方法。
+这类小的接口也被称作角色接口。
+接口隔离原则的目的是系统解开耦合，从而容易重构，更改和重新部署。
+接口隔离原则是在SOLID (面向对象设计)中五个面向对象设计(OOD)的原则之一，类似于在[GRASP](//en.wikipedia.org/wiki/GRASP_(object-oriented_design))中的高内聚原则。
+
+
+## 依赖反转原则
+
+在面向对象编程领域中，依赖反转原则是指一种特定的解耦（传统的依赖关系建立在高层次上，而具
+体的策略设置则应用在低层次的模块上）形式，使得高层次的模块不依赖于低层次的模块的实现细节，
+依赖关系被颠倒（反转），从而使得低层次模块依赖于高层次模块的需求抽象。
+
+该原则规定：
+
+1. 高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。
+2. 抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。
