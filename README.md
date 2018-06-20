@@ -14,10 +14,10 @@
   - [依赖反转原则](#依赖反转原则)
 
 
-## GRASP（面向对象设计）<a name="grasp"></a>
+## <a name="grasp"></a>GRASP（面向对象设计）
 
-General Responsibility Assignment Software Patterns，中文名称为“通用职责分配软件模式”，
-它共包括九种模式，它们描述了对象设计和职责分配的基本原则。
+通用职责分配软件模式（General Responsibility Assignment Software Patterns)
+共包括九种模式，它们描述了对象设计和职责分配的基本原则。
 也就是说，如何把现实世界的业务功能抽象成对象，如何决定一个系统有多少对象，
 每个对象都包括什么职责，GRASP给出了最基本的指导原则。
 它是设计一个面向对象系统的基础。
